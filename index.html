@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Projekt Wnętrza</title>
+		<link rel="stylesheet" href="./style/style.css" />
+		<script src="https://kit.fontawesome.com/b67deb3292.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="menu-btn">
+			<div class="hamburger"></div>
+		</div>
+		<nav class="nav">
+			<ul class="nav__list">
+				<li class="nav__element">
+					<a href="#header" class="nav__link"> Strona główna</a>
+				</li>
+
+				<li class="nav__element">
+					<a href="#offer" class="nav__link"> Portfolio</a>
+				</li>
+
+				<li class="nav__element">
+					<a href="#portfolio" class="nav__link">O mnie</a>
+				</li>
+
+				<li class="nav__element">
+					<a href="#contact" class="nav__link">Certyfikaty</a>
+				</li>
+
+				<li class="nav__element">
+					<a href="#about" class="nav__link">Kontakt</a>
+				</li>
+			</ul>
+		</nav>
+
+		<header class="header">
+			<img src="./images/logo.jpg" alt="logo" class="header__logo" />
+			<h1>zaprojektuj ze mną swoje wymarzone wnętrze</h1>
+		</header>
+
+		<main>
+			<section class="main-section portfolio">
+				<h2 class="section-title">portfolio</h2>
+				<div class="portfolio-container">
+					<div class="image-box">
+						<img
+							src="./images/portfolio/glebokie1_500w.jpg"
+							srcset="./images/portfolio/glebokie1_500w.jpg 500w, ./images/portfolio/glebokie1_1000w.jpg 1000w"
+							alt="glebokie project"
+							class="portfolio-image"
+						/>
+					</div>
+
+					<div class="image-box">
+						<img
+							src="./images/portfolio/glebokie1_500w.jpg"
+							srcset="./images/portfolio/glebokie2_500w.jpg 500w, ./images/portfolio/glebokie2_1000w.jpg 1000w"
+							alt="glebokie project"
+							class="portfolio-image"
+						/>
+					</div>
+
+					<div class="image-box">
+						<img
+							src="./images/portfolio/glebokie1_500w.jpg"
+							srcset="./images/portfolio/glebokie3_500w.jpg 500w, ./images/portfolio/glebokie3_1000w.jpg 1000w"
+							alt="glebokie project"
+							class="portfolio-image"
+						/>
+					</div>
+				</div>
+			</section>
+
+			<section class="main-section about">
+				<h2 class="section-title">o mnie</h2>
+				<div class="about-container">
+					<div class="about-item">
+						<img
+							src="./images/kar_photo.jpg"
+							srcset="./images/kar_photo_500w.jpg 500w, ./images/kar_photo_1000w.jpg 1000w"
+							alt="woman photo"
+							class="about-item__image"
+						/>
+						<h3>Jestem osobą otwartą na ludzi</h3>
+						<p class="about-item__desc">
+							Praca z klientem sprawia mi dużą przyjemność, otwierając możliwości do nowych wyzwań i celów projektowych.
+						</p>
+					</div>
+
+					<div class="about-item">
+						<i class="fas fa-star"></i>
+						<p class="about-item__desc">
+							W pracy cechuje mnie perfekcjonizm, dokładność i determinacja, nie boję się trudnych zadań.
+						</p>
+					</div>
+
+					<div class="about-item">
+						<i class="fas fa-award"></i>
+						<p class="about-item__desc">
+							W pełni ponoszę odpowiedzialność za powierzone mi zlecenia, jestem również otwarta na krytykę przy
+							wykonywaniu nowych projektów.
+						</p>
+					</div>
+
+					<div class="about-item">
+						<i class="fas fa-trophy"></i>
+						<p class="about-item__desc">
+							Opisałabym siebie jako osobę kreatywną, energiczną, wytrwałą, dającą z siebie sto procent za każdym razem.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="main-section certification">
+				<h2 class="section-title">certyfikaty</h2>
+				<div class="image-box">
+					<img src="./images/CERT_DMA_2017196.jpg" alt="glebokie project" class="portfolio-image" />
+				</div>
+				<br />
+				<div class="image-box">
+					<img src="./images/SCAN_20171118_135113091.jpg" alt="glebokie project" class="portfolio-image" />
+				</div>
+			</section>
+
+			<section class="main-section contact">
+				<h2 class="section-title section-title--light">kontakt</h2>
+				<div class="about-container">
+					<div class="about-item">
+						<a href="tel:+48-555-888-660">
+							<i class="fas fa-phone-alt"></i>
+						</a>
+						<p class="about-item__desc">
+							555-888-660
+						</p>
+					</div>
+
+					<div class="about-item">
+						<a href="mailto: karolak.0712@gmail.com">
+							<i class="far fa-envelope"></i>
+						</a>
+						<p class="about-item__desc">
+							karolak.0712@gmail.com
+						</p>
+					</div>
+
+					<div class="about-item">
+						<a href="https://www.facebook.com/karolina.karolak.1232">
+							<i class="fab fa-facebook"></i>
+						</a>
+						<p class="about-item__desc">
+							karolina.karolak.1232
+						</p>
+					</div>
+
+					<div class="about-item">
+						<i class="fab fa-instagram"></i>
+						<p class="about-item__desc">
+							@karolak.k
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<script src="script.js" async defer></script>
+	</body>
+</html>
