@@ -6,6 +6,10 @@
           box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 a {
   display: block;
   color: inherit;
@@ -210,7 +214,8 @@ h1 {
 
 /* ---------------------- SECTIONS ----------------------- */
 .main-section {
-  padding: 0em 2em 1em 2em;
+  padding: 2em;
+  padding-top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -248,11 +253,7 @@ h1 {
   margin-bottom: 1.5em;
 }
 
-.portfolio-container > :last-child {
-  margin-bottom: 0;
-}
-
-.portfolio-container .image-box::before {
+.portfolio-container .image-box::after {
   content: '';
   position: absolute;
   top: 8%;
@@ -263,13 +264,41 @@ h1 {
 }
 
 .image-box {
+  border-radius: 15px;
   position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.image-box:hover .portfolio-image {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .portfolio-image {
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 15px;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.gallery-button {
+  padding: 1em 2em;
+  background: none;
+  border: 2px solid #000;
+  font-family: inherit;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: background 0.3s ease-out, color 0.3s ease-out;
+  transition: background 0.3s ease-out, color 0.3s ease-out;
+}
+
+.gallery-button:hover {
+  background: #000;
+  color: #fff;
 }
 
 .about-container {
@@ -399,6 +428,56 @@ h1 {
 .contact .fa-facebook:focus,
 .contact .fa-facebook:hover {
   opacity: 0.5;
+}
+
+.gallery {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 10;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.gallery--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gallery__content {
+  overflow: hidden;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.gallery__item {
+  display: none;
+  margin: 0 auto;
+}
+
+.gallery__item--active {
+  display: block;
+}
+
+.gallery__image {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (min-width: 520px) {
