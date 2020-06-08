@@ -18,24 +18,24 @@
 				</li>
 
 				<li class="nav__element">
-					<a href="#offer" class="nav__link"> Portfolio</a>
+					<a href="#portfolio" class="nav__link"> Portfolio</a>
 				</li>
 
 				<li class="nav__element">
-					<a href="#portfolio" class="nav__link">O mnie</a>
+					<a href="#about" class="nav__link">O mnie</a>
 				</li>
 
 				<li class="nav__element">
-					<a href="#contact" class="nav__link">Certyfikaty</a>
+					<a href="#certification" class="nav__link">Certyfikaty</a>
 				</li>
 
 				<li class="nav__element">
-					<a href="#about" class="nav__link">Kontakt</a>
+					<a href="#contact" class="nav__link">Kontakt</a>
 				</li>
 			</ul>
 		</nav>
 
-		<header class="header">
+		<header class="header" id="header">
 			<div class="header-content">
 				<img src="./images/logo.jpg" alt="logo" class="header__logo" />
 				<h1>zaprojektuj ze mną swoje wymarzone wnętrze</h1>
@@ -43,57 +43,19 @@
 		</header>
 
 		<main>
-			<section class="main-section portfolio">
-				<h2 class="section-title">portfolio</h2>
-				<div class="portfolio-container">
-					<div class="image-box">
-						<img
-							src="./images/portfolio/glebokie3_500w.jpg"
-							srcset="./images/portfolio/glebokie3_500w.jpg 500w, ./images/portfolio/glebokie3_1000w.jpg 1000w"
-							alt="glebokie project"
-							class="portfolio-image"
-						/>
-					</div>
+			<!--_______________________________ GALERIA _______________________________-->
 
-					<div class="image-box">
-						<img
-							src="./images/portfolio/shotbar1_500w.jpg"
-							srcset="./images/portfolio/shotbar1_500w.jpg 500w, ./images/portfolio/shotbar1_1000w.jpg 1000w"
-							alt="glebokie project"
-							class="portfolio-image"
-						/>
-					</div>
-
-					<div class="image-box">
-						<img
-							src="./images/portfolio/shotbar2_500w.jpg"
-							srcset="./images/portfolio/shotbar2_500w.jpg 500w, ./images/portfolio/shotbar2_1000w.jpg 1000w"
-							alt="glebokie project"
-							class="portfolio-image"
-						/>
-					</div>
-
-					<div class="image-box">
-						<img
-							src="./images/portfolio/sypialnia1_500w.jpg"
-							srcset="./images/portfolio/sypialnia1_500w.jpg 500w, ./images/portfolio/sypialnia1_1000w.jpg 1000w"
-							alt="glebokie project"
-							class="portfolio-image"
-						/>
-					</div>
-				</div>
-
-				<button type="button" class="gallery-button">zobacz więcej</button>
-			</section>
-
-			<div class="gallery gallery">
+			<div class="gallery">
 				<div class="gallery__content">
-					<i class="fas fa-times close"></i>
+					<i class="fas fa-times-circle close"></i>
+					<i class="fas fa-arrow-alt-circle-left move-left"></i>
+					<i class="fas fa-arrow-alt-circle-right move-right"></i>
 
 					<div class="gallery__item gallery__item--active">
 						<img
 							src="./images/portfolio/glebokie1_500w.jpg"
 							srcset="./images/portfolio/glebokie1_500w.jpg 500w, ./images/portfolio/glebokie1_1000w.jpg 1000w"
+							sizes="96vw"
 							alt="glebokie project"
 							class="gallery__image"
 						/>
@@ -103,6 +65,7 @@
 						<img
 							src="./images/portfolio/glebokie2_500w.jpg"
 							srcset="./images/portfolio/glebokie2_500w.jpg 500w, ./images/portfolio/glebokie2_1000w.jpg 1000w"
+							sizes="96vw"
 							alt="glebokie project"
 							class="gallery__image"
 						/>
@@ -112,20 +75,88 @@
 						<img
 							src="./images/portfolio/glebokie3_500w.jpg"
 							srcset="./images/portfolio/glebokie3_500w.jpg 500w, ./images/portfolio/glebokie3_1000w.jpg 1000w"
+							sizes="96vw"
+							alt="glebokie project"
+							class="gallery__image"
+						/>
+					</div>
+
+					<div class="gallery__item">
+						<img
+							src="./images/portfolio/shotbar1_500w.jpg"
+							srcset="./images/portfolio/shotbar1_500w.jpg 500w, ./images/portfolio/shotbar1_1000w.jpg 1000w"
+							sizes="96vw"
 							alt="glebokie project"
 							class="gallery__image"
 						/>
 					</div>
 				</div>
 			</div>
+			<!--_______________________________ PORTFOLIO _______________________________-->
 
-			<section class="main-section about">
+			<section class="main-section portfolio" id="portfolio">
+				<h2 class="section-title">portfolio</h2>
+				<div class="portfolio-container">
+					<div class="image-box">
+						<img
+							src="./images/portfolio/glebokie3_500w.jpg"
+							srcset="./images/portfolio/glebokie3_500w.jpg 500w, ./images/portfolio/glebokie3_1000w.jpg 1000w"
+							sizes="(max-width: 700px) 95vw,
+              47vw"
+							alt="glebokie project"
+							class="portfolio-image"
+						/>
+					</div>
+
+					<div class="image-box">
+						<img
+							src="./images/portfolio/shotbar1_500w.jpg"
+							srcset="./images/portfolio/shotbar1_500w.jpg 500w, ./images/portfolio/shotbar1_1000w.jpg 1000w"
+							sizes="(max-width: 700px) 95vw,
+              47vw"
+							alt="glebokie project"
+							class="portfolio-image"
+						/>
+					</div>
+
+					<div class="image-box">
+						<img
+							src="./images/portfolio/shotbar2_500w.jpg"
+							srcset="./images/portfolio/shotbar2_500w.jpg 500w, ./images/portfolio/shotbar2_1000w.jpg 1000w"
+							sizes="(max-width: 700px) 95vw,
+              47vw"
+							alt="glebokie project"
+							class="portfolio-image"
+						/>
+					</div>
+
+					<div class="image-box">
+						<img
+							src="./images/portfolio/sypialnia1_500w.jpg"
+							srcset="./images/portfolio/sypialnia1_500w.jpg 500w, ./images/portfolio/sypialnia1_1000w.jpg 1000w"
+							sizes="(max-width: 700px) 95vw,
+              47vw"
+							alt="glebokie project"
+							class="portfolio-image"
+						/>
+					</div>
+				</div>
+
+				<button type="button" class="gallery-button">zobacz więcej</button>
+			</section>
+
+			<!--_______________________________ABOUT_______________________________-->
+
+			<section class="main-section about" id="about">
 				<h2 class="section-title">o mnie</h2>
 				<div class="about-container">
 					<div class="about-item">
 						<img
 							src="./images/kar_photo.jpg"
 							srcset="./images/kar_photo_500w.jpg 500w, ./images/kar_photo_1000w.jpg 1000w"
+							sizes="(max-width: 700px) 170px,
+							(min-width: 700px) 260px,
+              350px"
 							alt="woman photo"
 							class="about-item__image"
 						/>
@@ -162,24 +193,42 @@
 				</div>
 			</section>
 
-			<section class="main-section certification">
+			<!--_______________________________ CERTYFIKATY _______________________________-->
+
+			<section class="main-section certification" id="certification">
 				<h2 class="section-title">certyfikaty</h2>
 				<div class="certificat-container">
 					<div class="image-box">
-						<img src="./images/CERT_DMA_2017196.jpg" alt="glebokie project" class="portfolio-image" />
+						<img
+							src="./images/certific_1.jpg"
+							srcset="./images/certific_1_500w.jpg 500w, ./images/certific_1_1000w.jpg 1000w"
+							sizes="(max-width: 700px) 95vw,
+              45vw"
+							alt="glebokie project"
+							class="portfolio-image"
+						/>
 					</div>
 					<div class="image-box">
-						<img src="./images/SCAN_20171118_135113091.jpg" alt="glebokie project" class="portfolio-image" />
+						<img
+							src="./images/certific_2.jpg"
+							srcset="./images/certific_2_500w.jpg 500w, ./images/certific_2.jpg 1000w"
+							sizes="(max-width: 700px) 95vw,
+              45vw"
+							alt="glebokie project"
+							class="portfolio-image"
+						/>
 					</div>
 				</div>
 			</section>
 
-			<section class="main-section contact">
+			<!--_______________________________ KONTAKT _______________________________-->
+
+			<section class="main-section contact" id="contact">
 				<h2 class="section-title section-title--light">kontakt</h2>
 				<div class="about-container">
 					<div class="about-item">
-						<a href="tel:+48-555-888-660">
-							<i class="fas fa-phone-alt"></i>
+						<a href="tel:+48-555-888-660" target="_blank">
+							<i class="fas fa-phone-alt connector"></i>
 						</a>
 						<p class="about-item__desc">
 							555-888-660
@@ -187,7 +236,7 @@
 					</div>
 
 					<div class="about-item">
-						<a href="mailto: karolak.0712@gmail.com">
+						<a href="mailto: karolak.0712@gmail.com" target="_blank">
 							<i class="far fa-envelope"></i>
 						</a>
 						<p class="about-item__desc">
@@ -196,7 +245,7 @@
 					</div>
 
 					<div class="about-item">
-						<a href="https://www.facebook.com/karolina.karolak.1232">
+						<a href="https://www.facebook.com/karolina.karolak.1232" target="_blank">
 							<i class="fab fa-facebook"></i>
 						</a>
 						<p class="about-item__desc">
