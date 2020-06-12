@@ -614,17 +614,17 @@ h1 {
   .header .header-content {
     margin-right: 7%;
     min-height: 0;
-    width: 42%;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    width: 50%;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
   .header .header__logo {
     width: 100%;
-    max-width: 800px;
+    max-width: 400px;
   }
   .header h1 {
     max-width: 100%;
@@ -697,10 +697,10 @@ h1 {
     width: 1.6em;
   }
   .header .header-content {
-    width: 30%;
+    width: 45%;
   }
-  .header__logo {
-    width: 70%;
+  .header .header__logo {
+    max-width: 500px;
   }
   .main-section {
     width: 80%;
