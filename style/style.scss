@@ -1,0 +1,341 @@
+@import 'reset';
+/* ------------CONFIG---------- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Proza+Libre&display=swap');
+
+/* ---------------------- NAWIGACJA ----------------------- */
+.nav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 2;
+	transition: transform 0.25s ease-in-out;
+	transform: translateX(100%);
+
+	background-color: rgba(#151515, 0.9);
+
+	&--active {
+		transform: translateX(0);
+	}
+}
+.nav__list {
+	margin-top: 5em;
+	padding-left: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.nav__link {
+	display: block;
+	padding: 0.8em 1em;
+	overflow: hidden;
+	transition: 0.35s all ease-out;
+	color: $color-sec;
+	text-transform: uppercase;
+}
+
+.nav__link:hover {
+	background: rgba($color: $color-sec, $alpha: 0.1);
+}
+
+// _______ Hamburger button ________
+.menu-btn {
+	position: fixed;
+	top: 0;
+	right: 0;
+	margin: 1.5em;
+	//ON WIDTH DEPENDS SHAPE OF X
+	width: 1.51em;
+	height: 1.25em;
+	z-index: 3;
+	cursor: pointer;
+	transition: 0.3s all cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.hamburger,
+.menu-btn::before,
+.menu-btn::after {
+	position: absolute;
+	height: 3px;
+	width: inherit;
+	transition: inherit;
+	transform-origin: right;
+
+	background-color: $color-prim;
+}
+.hamburger {
+	top: 50%;
+	transform: translateY(-50%);
+	transition-duration: 0.2s;
+}
+.menu-btn::before {
+	content: '';
+	top: 0;
+}
+.menu-btn::after {
+	content: '';
+	bottom: 0;
+}
+
+.menu-btn {
+	&--active {
+		.hamburger {
+			box-shadow: none;
+			background-color: rgba(#000000, 0);
+		}
+		&::before {
+			bottom: 0;
+			transform: rotate(-45deg);
+			background-color: $color-sec;
+		}
+		&::after {
+			bottom: 0;
+			transform: rotate(45deg);
+			background-color: $color-sec;
+		}
+	}
+}
+/* ---------------------- GLOBAL ----------------------- */
+
+html {
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+}
+h1,
+h2,
+h3 {
+	font-family: 'Proza Libre', sans-serif;
+	font-weight: normal;
+}
+
+/* ---------------------- HEADER ----------------------- */
+
+.header {
+	min-height: 100vh;
+	background-image: url('.././images/header_background.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
+}
+.header-content {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.header__logo {
+	width: 80%;
+	max-width: 300px;
+}
+h1 {
+	max-width: 80%;
+	padding: 1em;
+	margin-top: 2em;
+
+	background-color: rgba(255, 255, 255, 0.6);
+	font-size: 1.2rem;
+	font-family: 'Proza Libre', sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: normal;
+}
+
+/* ---------------------- SECTIONS ----------------------- */
+//------ general ---------
+.main-section {
+	padding: 2em;
+	padding-top: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.section-title {
+	margin-top: 1em;
+	margin-bottom: 1.5em;
+	padding: 0.1em 0;
+
+	font-size: 1.7rem;
+	text-align: center;
+	text-transform: capitalize;
+	font-weight: normal;
+
+	border-bottom: 2px solid #000;
+}
+
+//--------- portfolio ---------
+.portfolio-container {
+	display: flex;
+	flex-direction: column;
+
+	& > :nth-child(n) {
+		margin-bottom: 1.5em;
+	}
+
+	.image-box::after {
+		content: '';
+		position: absolute;
+		top: 8%;
+		left: 8%;
+		width: calc(100% - (8% * 2));
+		height: calc(100% - (8% * 2));
+		border: 2px solid #333;
+	}
+
+	.image-box {
+		border-radius: 15px;
+		position: relative;
+		overflow: hidden;
+
+		&:hover {
+			.portfolio-image {
+				transform: scale(1.2);
+			}
+		}
+	}
+}
+
+.portfolio-image {
+	object-fit: cover;
+	transition: transform 0.5s ease-in-out;
+}
+
+.gallery-button {
+	padding: 1em 2em;
+	background: none;
+	border: 2px solid $color-prim;
+	font-family: inherit;
+	font-size: 1rem;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: background 0.3s ease-out, color 0.3s ease-out;
+
+	&:hover {
+		background: $color-prim;
+		color: $color-sec;
+	}
+}
+
+//--------- about ---------
+
+.about-container {
+	width: 100%;
+	& > :nth-child(n) {
+		margin-bottom: 1.5rem;
+	}
+	& > :last-child {
+		margin-bottom: 0;
+	}
+}
+
+.about-item {
+	padding: 1em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+
+	border: 2px solid $color-prim;
+	border-radius: 5px;
+}
+
+.about .about-container > :nth-child(1) {
+	padding-top: 0;
+	border: 0;
+}
+
+.about-item__image {
+	margin-bottom: 0.45em;
+	width: 170px;
+	height: 170px;
+	object-fit: cover;
+	object-position: top;
+	overflow: hidden;
+
+	border-radius: 50%;
+}
+.about-item {
+	.fas,
+	.far,
+	.fab {
+		height: 7rem;
+		width: 7rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		font-size: 4rem;
+
+		color: $color-sec;
+		background: $color-prim;
+		border-radius: 50%;
+	}
+	.fa-facebook {
+		font-size: 7rem;
+		background: $color-sec;
+		color: $color-prim;
+	}
+}
+
+.about-item h3 {
+	font-size: 1.3rem;
+	font-weight: normal;
+}
+
+.about-item__desc {
+	margin-top: 1em;
+}
+
+//--------- certyfikaty ---------
+
+.certificat-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	& > :nth-child(n) {
+		margin-bottom: 1.5em;
+	}
+	& > :last-child {
+		margin-bottom: 0;
+	}
+
+	.portfolio-image {
+		border: 2px solid $color-prim;
+		object-fit: scale-down;
+		width: auto;
+		max-width: 100%;
+	}
+}
+
+//--------- kontakt ---------
+.contact {
+	.fas,
+	.far,
+	.fab {
+		transition: background 0.3s ease-in-out;
+	}
+	.fa-facebook {
+		transition: color 0.3s ease-in-out;
+	}
+}
+.contact a {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+.contact a:hover {
+	.fas,
+	.far,
+	.fab {
+		background: $color-hov;
+	}
+	.fa-facebook {
+		background: #fff;
+		color: $color-hov;
+	}
+}
+
+@import 'gallery';
+@import 'responsive';

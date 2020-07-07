@@ -21,5 +21,3 @@ Potencjalni klienci
 ## Linki do projektu
 
 [Figma](https://www.figma.com/file/hL5TJyYJnasXZ0jpENw308/Inside-design?node-id=0:1)
-
-[link do strony](https://projektwnetrze.000webhostapp.com/)
